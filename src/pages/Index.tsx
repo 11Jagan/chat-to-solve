@@ -1,8 +1,10 @@
 import { ChatInterface } from "@/components/ChatInterface";
+import { AnimatedBackground } from "@/components/AnimatedBackground";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+    <div className="min-h-screen relative">
+      <AnimatedBackground />
       <ChatInterface />
     </div>
   );

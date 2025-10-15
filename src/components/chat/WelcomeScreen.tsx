@@ -31,44 +31,61 @@ const suggestedQuestions = [
 export const WelcomeScreen = ({ onQuestionClick }: WelcomeScreenProps) => {
   return (
     <div className="flex-1 flex items-center justify-center p-8">
-      <div className="max-w-2xl w-full space-y-8 animate-in fade-in duration-500">
-        <div className="text-center space-y-4">
-          <div className="inline-block p-4 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full">
-            <MessageCircle className="w-12 h-12 text-primary" />
+      <div className="max-w-2xl w-full space-y-10 animate-slide-up">
+        <div className="text-center space-y-6">
+          <div className="relative inline-block">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full blur-2xl opacity-50 animate-pulse" />
+            <div className="relative glass-card p-6 rounded-full">
+              <MessageCircle className="w-16 h-16 text-primary" />
+            </div>
           </div>
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            Welcome to Support
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            I'm here to help you with any questions or issues you might have.
-          </p>
+          
+          <div className="space-y-3">
+            <h2 className="text-5xl font-bold gradient-text">
+              Welcome to AI Support
+            </h2>
+            <p className="text-muted-foreground text-xl max-w-md mx-auto">
+              I'm here to help you solve any issues instantly with AI-powered assistance
+            </p>
+          </div>
         </div>
 
-        <div className="space-y-3">
-          <p className="text-sm font-medium text-muted-foreground text-center">
-            Popular questions:
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div className="space-y-4">
+          <div className="flex items-center justify-center gap-2">
+            <div className="h-px w-12 bg-gradient-to-r from-transparent to-primary" />
+            <p className="text-sm font-medium text-muted-foreground">
+              Try asking about
+            </p>
+            <div className="h-px w-12 bg-gradient-to-l from-transparent to-primary" />
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {suggestedQuestions.map((question, index) => {
               const Icon = question.icon;
               return (
-                <Card
+                <div
                   key={index}
-                  className="p-4 cursor-pointer hover:shadow-lg hover:scale-105 transition-all duration-200 bg-card/50 backdrop-blur-sm border-primary/10 hover:border-primary/30"
-                  onClick={() => onQuestionClick(question.text)}
+                  className="group relative animate-fade-in"
+                  style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <div className="flex items-start gap-3">
-                    <div className="bg-primary/10 p-2 rounded-lg">
-                      <Icon className="w-5 h-5 text-primary" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <Card
+                    className="relative glass-card p-5 cursor-pointer hover:scale-105 transition-all duration-300 border-primary/20 hover:border-primary/40"
+                    onClick={() => onQuestionClick(question.text)}
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="glass p-3 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20">
+                        <Icon className="w-6 h-6 text-primary" />
+                      </div>
+                      <div className="flex-1">
+                        <p className="font-semibold text-foreground mb-1">{question.text}</p>
+                        <p className="text-xs text-muted-foreground">
+                          {question.category}
+                        </p>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <p className="text-sm font-medium">{question.text}</p>
-                      <p className="text-xs text-muted-foreground mt-1">
-                        {question.category}
-                      </p>
-                    </div>
-                  </div>
-                </Card>
+                  </Card>
+                </div>
               );
             })}
           </div>
