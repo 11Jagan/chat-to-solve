@@ -1,11 +1,7 @@
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-interface ChatButtonProps {
-  onClick: () => void;
-}
-
-export const ChatButton = ({ onClick }: ChatButtonProps) => {
+export const ChatButton = ({ onClick }) => {
   return (
     <Button
       onClick={onClick}

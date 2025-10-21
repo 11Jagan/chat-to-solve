@@ -1,10 +1,6 @@
 import { HelpCircle, Wrench, FileQuestion, MessageSquare, MessageCircle } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
-interface WelcomeScreenProps {
-  onQuestionClick: (question: string) => void;
-}
-
 const suggestedQuestions = [
   {
     icon: HelpCircle,
@@ -28,7 +24,7 @@ const suggestedQuestions = [
   }
 ];
 
-export const WelcomeScreen = ({ onQuestionClick }: WelcomeScreenProps) => {
+export const WelcomeScreen = ({ onQuestionClick }) => {
   return (
     <div className="flex-1 flex items-center justify-center p-8">
       <div className="max-w-2xl w-full space-y-10 animate-slide-up">

@@ -1,12 +1,7 @@
-import { Message } from "../ChatInterface";
 import { User, Bot } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-interface MessageBubbleProps {
-  message: Message;
-}
-
-export const MessageBubble = ({ message }: MessageBubbleProps) => {
+export const MessageBubble = ({ message }) => {
   const isUser = message.role === "user";
 
   return (

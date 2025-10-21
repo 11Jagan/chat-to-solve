@@ -6,18 +6,11 @@ import { WelcomeScreen } from "./chat/WelcomeScreen";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 
-export interface Message {
-  id: string;
-  role: "user" | "assistant";
-  content: string;
-  timestamp: Date;
-}
-
 export const ChatInterface = () => {
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [isChatStarted, setIsChatStarted] = useState(false);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const messagesEndRef = useRef(null);
   const { toast } = useToast();
 
   const scrollToBottom = () => {
@@ -28,14 +21,14 @@ export const ChatInterface = () => {
     scrollToBottom();
   }, [messages]);
 
-  const handleSendMessage = async (content: string) => {
+  const handleSendMessage = async (content) => {
     if (!content.trim()) return;
 
     if (!isChatStarted) {
       setIsChatStarted(true);
     }
 
-    const userMessage: Message = {
+    const userMessage = {
       id: Date.now().toString(),
       role: "user",
       content,
@@ -58,7 +51,7 @@ export const ChatInterface = () => {
 
       if (error) throw error;
 
-      const assistantMessage: Message = {
+      const assistantMessage = {
         id: (Date.now() + 1).toString(),
         role: "assistant",
         content: data.response,
@@ -78,7 +71,7 @@ export const ChatInterface = () => {
     }
   };
 
-  const handleSuggestedQuestion = (question: string) => {
+  const handleSuggestedQuestion = (question) => {
     handleSendMessage(question);
   };
 
