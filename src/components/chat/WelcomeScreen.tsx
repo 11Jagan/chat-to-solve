@@ -42,10 +42,10 @@ export const WelcomeScreen = ({ onQuestionClick }: WelcomeScreenProps) => {
           
           <div className="space-y-3">
             <h2 className="text-5xl font-bold gradient-text">
-              Welcome to AI Support
+              Welcome to Customer Support
             </h2>
             <p className="text-muted-foreground text-xl max-w-md mx-auto">
-              I'm here to help you solve any issues instantly with AI-powered assistance
+              We're here to help you solve any issues instantly
             </p>
           </div>
         </div>

@@ -8,105 +8,99 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 30% 98%;
-    --foreground: 240 10% 10%;
+    --background: 38 33% 96%;
+    --foreground: 9 28% 19%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 10%;
+    --card: 38 33% 96%;
+    --card-foreground: 9 28% 19%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 10%;
+    --popover: 38 33% 96%;
+    --popover-foreground: 9 28% 19%;
 
-    --primary: 262 83% 58%;
+    --primary: 122 46% 34%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 60% 50%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 122 38% 93%;
+    --secondary-foreground: 122 55% 23%;
 
-    --muted: 220 20% 94%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 30 29% 91%;
+    --muted-foreground: 13 25% 34%;
 
-    --accent: 262 83% 58%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 122 38% 84%;
+    --accent-foreground: 122 55% 23%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 66% 47%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 88%;
-    --input: 220 20% 88%;
-    --ring: 262 83% 58%;
+    --border: 30 21% 83%;
+    --input: 30 21% 83%;
+    --ring: 122 46% 34%;
 
-    --radius: 1rem;
+    --radius: 0.5rem;
     
     /* Modern gradient colors */
-    --gradient-start: 262 83% 58%;
-    --gradient-end: 220 60% 50%;
+    --gradient-start: 122 46% 34%;
+    --gradient-end: 122 38% 84%;
     
     /* Glass morphism */
-    --glass-bg: 0 0% 100% / 0.6;
-    --glass-border: 0 0% 100% / 0.2;
+    --glass-bg: 38 33% 96% / 0.6;
+    --glass-border: 30 21% 83% / 0.2;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 30 29% 91%;
+    --sidebar-foreground: 9 28% 19%;
+    --sidebar-primary: 122 46% 34%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 122 38% 84%;
+    --sidebar-accent-foreground: 122 55% 23%;
+    --sidebar-border: 30 21% 83%;
+    --sidebar-ring: 122 46% 34%;
   }
 
   .dark {
-    --background: 240 10% 8%;
-    --foreground: 0 0% 98%;
+    --background: 140 20% 14%;
+    --foreground: 30 23% 92%;
 
-    --card: 240 10% 12%;
-    --card-foreground: 0 0% 98%;
+    --card: 135 13% 20%;
+    --card-foreground: 30 23% 92%;
 
-    --popover: 240 10% 12%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 135 13% 20%;
+    --popover-foreground: 30 23% 92%;
 
-    --primary: 262 83% 58%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 122 39% 49%;
+    --primary-foreground: 134 52% 8%;
 
-    --secondary: 220 60% 50%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 135 9% 27%;
+    --secondary-foreground: 122 11% 86%;
 
-    --muted: 240 10% 18%;
-    --muted-foreground: 240 5% 65%;
+    --muted: 135 12% 15%;
+    --muted-foreground: 30 6% 81%;
 
-    --accent: 262 83% 58%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 122 43% 39%;
+    --accent-foreground: 30 23% 92%;
 
-    --destructive: 0 62.8% 50%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 66% 47%;
+    --destructive-foreground: 30 23% 92%;
 
-    --border: 240 10% 18%;
-    --input: 240 10% 18%;
-    --ring: 262 83% 58%;
+    --border: 135 9% 27%;
+    --input: 135 9% 27%;
+    --ring: 122 39% 49%;
     
     /* Modern gradient colors */
-    --gradient-start: 262 83% 58%;
-    --gradient-end: 220 60% 50%;
+    --gradient-start: 122 39% 49%;
+    --gradient-end: 122 43% 39%;
     
     /* Glass morphism */
-    --glass-bg: 0 0% 0% / 0.4;
-    --glass-border: 0 0% 100% / 0.1;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --glass-bg: 140 20% 14% / 0.4;
+    --glass-border: 135 9% 27% / 0.1;
+    
+    --sidebar-background: 140 20% 14%;
+    --sidebar-foreground: 30 23% 92%;
+    --sidebar-primary: 122 39% 49%;
+    --sidebar-primary-foreground: 134 52% 8%;
+    --sidebar-accent: 122 43% 39%;
+    --sidebar-accent-foreground: 30 23% 92%;
+    --sidebar-border: 135 9% 27%;
+    --sidebar-ring: 122 39% 49%;
   }
 }
 

@@ -16,11 +16,11 @@ export const ChatHeader = () => {
         
         <div className="flex-1">
           <div className="flex items-center gap-2">
-            <h1 className="text-3xl font-bold gradient-text">AI Support</h1>
+            <h1 className="text-3xl font-bold gradient-text">Customer Support</h1>
             <Sparkles className="w-5 h-5 text-primary animate-pulse" />
           </div>
           <p className="text-muted-foreground text-sm mt-1">
-            Powered by advanced AI • Always here to help
+            Always here to help you
           </p>
         </div>
       </div>
