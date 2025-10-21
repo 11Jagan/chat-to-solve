@@ -5,8 +5,7 @@ export const ChatHeader = () => {
     <div className="glass border-b border-white/10 p-6 relative">
       <div className="flex items-center gap-4">
         <div className="glass-card p-3 rounded-2xl">
-            <MessageCircle className="w-7 h-7 text-primary" />
-          </div>
+          <MessageCircle className="w-7 h-7 text-primary" />
         </div>
         
         <div className="flex-1">
